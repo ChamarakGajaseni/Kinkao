@@ -34,6 +34,7 @@ public class UserServicesConfiguration {
                     .getUserInfoEndpoint()
                     .getUserNameAttributeName();
             OAuth2User user = delegate.loadUser(request);
+
             try {
                 user = new DefaultOAuth2User(new ArrayList<>(),
                         user.getAttributes(), attribute);
